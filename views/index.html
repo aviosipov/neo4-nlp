@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mini Chat APP</title>
+
+	
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>	
+	<script src="/js/angular.js"></script>
+	<script src="/js/app.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl"> 
+
+
+	<div class="container" >
+
+
+		<div class="header clearfix">
+			<h3 class="text-muted">Chat Bot Demo</h3>
+
+		</div>
+
+		<div class="col-md-8">
+
+			<h3>chat</h3>
+
+			<div class="messages" >
+				<div class="bs-callout bs-callout-info" >
+					<h4>Hello, I am ready to chat with you</h4>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="col-md-4">
+
+			
+				
+			<h3>teach me something</h3>
+
+			<textarea class="form-control" rows="3" ng-model='userTextInput'></textarea>
+			
+			<button class="btn btn-block btn-primary teachButton" ng-click="submitText()">Submit</button>
+				
+			
+
+		</div>
+
+
+
+	</div> <!-- /container -->
+
+
+	<div class="navbar navbar-fixed-bottom bottom-menu">
+		<div class="container">
+
+		
+	<div class="text-entry">
+			<div class="form-group">
+	    		<label for="exampleInputEmail1">Enter text</label>
+	    		<input ng-keyup="submitLine($event)" type="text" class="form-control" ng-model="userInput" >
+	  		</div>
+  		</div>
+	</div>
+
+	</div>
+</body>
+</html>
